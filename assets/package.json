@@ -1,0 +1,18 @@
+{
+  "name": "omnirooms-assets",
+  "version": "1.0.0",
+  "main": "./js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "phoenix",
+    "assets"
+  ],
+  "author": "Arno Muttilainen",
+  "license": "MIT",
+  "description": "Assets for Omnirooms",
+  "dependencies": {
+    "flowbite": "^3.1.2"
+  }
+}

@@ -9,7 +9,8 @@ module.exports = {
   content: [
     "./js/**/*.js",
     "../lib/omnirooms_web.ex",
-    "../lib/omnirooms_web/**/*.*ex"
+    "../lib/omnirooms_web/**/*.*ex",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     extend: {
@@ -69,6 +70,9 @@ module.exports = {
           }
         }
       }, {values})
-    })
+    }),
+
+    // Flowbite
+    require('flowbite/plugin')
   ]
 }
