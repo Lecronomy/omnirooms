@@ -20,6 +20,10 @@ defmodule OmniroomsWeb.Router do
     get "/", PageController, :home
   end
 
+  get "/room", OmniroomsWeb.RoomController, :room_redirect
+
+  get "/room/:name", OmniroomsWeb.RoomController, :room
+
   # Other scopes may use custom stacks.
   # scope "/api", OmniroomsWeb do
   #   pipe_through :api
