@@ -11,8 +11,6 @@ defmodule OmniroomsWeb.RoomController do
 
   def room(conn, _params) do
     room_name = conn.path_params["name"] |> String.downcase()
-    conn
-      |> assign(:page_title, room_name)
-      |> render(:room, room_name: room_name)
+    render(conn, :room, page_title: room_name, room_name: room_name)
   end
 end

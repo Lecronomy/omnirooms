@@ -4,8 +4,6 @@ defmodule OmniroomsWeb.PageController do
   def home(conn, _params) do
     # The home page is often custom made,
     # so skip the default app layout.
-    conn
-      |> assign(:page_title, gettext("Home"))
-      |> render(:home, layout: false)
+    render(conn, :home, layout: false, page_title: gettext("Home"))
   end
 end
