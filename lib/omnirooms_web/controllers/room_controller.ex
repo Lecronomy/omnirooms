@@ -13,6 +13,6 @@ defmodule OmniroomsWeb.RoomController do
     room_name = conn.path_params["name"] |> String.downcase()
     conn
       |> assign(:page_title, room_name)
-      |> text("This would be the " <> room_name <> " room.") # Placeholder
+      |> render(:room, room_name: room_name)
   end
 end
