@@ -61,3 +61,8 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "close"
 msgstr ""
+
+#: lib/omnirooms_web/controllers/page_controller.ex:8
+#, elixir-autogen, elixir-format
+msgid "Home"
+msgstr ""
