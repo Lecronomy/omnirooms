@@ -25,10 +25,39 @@
     </div>
 </aside>
 
-<div class="sm:ml-64 flex-1 flex flex-col">
-    <div class="w-full flex-1 flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-        <div class="flex-1">
-            <p class="mb-3 text-gray-500 dark:text-gray-400">This will be the {@room_name} room.</p>
+<div class="sm:ml-64 flex-1 flex flex-col h-full">
+    <div class="w-full h-full flex-1 flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+        <!-- Chat box -->
+        <div class="flex-1 flex flex-col h-full overflow-y-scroll p-4">
+            <!-- Messages -->
+            <!-- Scrolling is janky, will fix later -->
+            <p class="mb-3">
+                <strong class="font-semibold text-gray-900 dark:text-white">User 1: </strong>
+                <span class="text-gray-500 dark:text-gray-400">This is the {@room_name} room.</span>
+            </p>
+            <p class="mb-3">
+                <strong class="font-semibold text-gray-900 dark:text-white">User 2: </strong>
+                <span class="text-gray-500 dark:text-gray-400">nice!</span>
+            </p>
+            <p class="mb-3">
+                <strong class="font-semibold text-gray-900 dark:text-white">User 1: </strong>
+                <span class="text-gray-500 dark:text-gray-400">Third message</span>
+            </p>
+            <p class="mb-3">
+                <strong class="font-semibold text-gray-900 dark:text-white">User 2: </strong>
+                <span class="text-gray-500 dark:text-gray-400">Fourth message</span>
+            </p>
         </div>
+        <hr class="h-px my-3 bg-gray-200 border-0 dark:bg-gray-700">
+        <form>
+            <div class="flex">
+                <div class="relative w-full">
+                    <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-lg rounded-s-gray-100 rounded-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Type your message here" required />
+                    <button type="submit" aria-label="Send" class="absolute top-0 end-0 p-2.5 h-full text-sm font-medium text-white bg-blue-700 rounded-e-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <.icon name="hero-paper-airplane-solid" class="w-4 h-4" />
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
