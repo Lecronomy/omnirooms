@@ -1,7 +1,3 @@
-// If you want to use Phoenix channels, run `mix help phx.gen.channel`
-// to get started and then uncomment the line below.
-// import "./user_socket.js"
-
 // You can include dependencies in two ways.
 //
 // The simplest option is to put them in assets/vendor and
@@ -23,6 +19,7 @@ import {LiveSocket} from "phoenix_live_view"
 import topbar from "../vendor/topbar"
 // Include Flowbite
 import "flowbite/dist/flowbite.phoenix.js";
+import { joinRoom } from "./user_socket";
 
 let csrfToken = document.querySelector("meta[name='csrf-token']").getAttribute("content")
 let liveSocket = new LiveSocket("/live", Socket, {
@@ -44,3 +41,10 @@ liveSocket.connect()
 // >> liveSocket.disableLatencySim()
 window.liveSocket = liveSocket
 
+// Connect to room if on the room page
+let roomData = document.getElementById("room-data")
+if (roomData) {
+  import("./user_socket").then(({ joinRoom }) => {
+    joinRoom(roomData.dataset.roomName)
+  })
+}
